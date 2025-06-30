@@ -46,6 +46,8 @@ public class JogadorGUI extends javax.swing.JFrame {
         jLabelInforClasses = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaSelecClasse = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextAreaErros = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -131,6 +133,11 @@ public class JogadorGUI extends javax.swing.JFrame {
         jTextAreaSelecClasse.setRows(5);
         jScrollPane2.setViewportView(jTextAreaSelecClasse);
 
+        jTextAreaErros.setEditable(false);
+        jTextAreaErros.setColumns(20);
+        jTextAreaErros.setRows(5);
+        jScrollPane3.setViewportView(jTextAreaErros);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -145,23 +152,23 @@ public class JogadorGUI extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxClasses, 0, 256, Short.MAX_VALUE)
+                            .addComponent(jComboBoxClasses, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTextFieldNome)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jTextFieldIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelInforClasses)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButtonCriarPersonagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonLimparDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonDeletarJogador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jToggleButtonExibirPersonagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabelExibirPersonagem))
-                            .addComponent(jLabelInforClasses))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonCriarPersonagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonLimparDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonDeletarJogador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jToggleButtonExibirPersonagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelExibirPersonagem))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -179,15 +186,18 @@ public class JogadorGUI extends javax.swing.JFrame {
                     .addComponent(jComboBoxClasses, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonCriarPersonagem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonLimparDados)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonDeletarJogador)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButtonExibirPersonagem)
-                .addGap(8, 8, 8)
-                .addComponent(jLabelExibirPersonagem)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonCriarPersonagem)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonLimparDados)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonDeletarJogador)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jToggleButtonExibirPersonagem)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabelExibirPersonagem))
+                    .addComponent(jScrollPane3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -264,7 +274,13 @@ public class JogadorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldIdadeActionPerformed
 
     private void jButtonCriarPersonagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCriarPersonagemActionPerformed
-
+        String textFieldNome = jTextFieldNome.getText();
+        String textFieldIdade = jTextFieldIdade.getText();
+        
+        if(textFieldNome.isEmpty() || textFieldIdade.isEmpty()){
+            jTextAreaErros.setText("Erro\nNome ou Idade estão vazios");
+        }
+        
         String nome = jTextFieldNome.getText();
         int idade = Integer.parseInt(jTextFieldIdade.getText()); //transforma o texto em inteiro
         String classeSelecionada = (String) jComboBoxClasses.getSelectedItem();
@@ -280,38 +296,40 @@ public class JogadorGUI extends javax.swing.JFrame {
             System.out.println("Armadura: " + jogador.getArmadura());
             System.out.println("Classe: " + classeSelecionada());
             System.out.println("-----------------------------");
+            
+            jTextAreaErros.setText("Voce ja tem um personagem criado!\n Delete para criar outro.");
         }
         else{
             if(classeSelecionada.equals("Barbaro")){
                 jogador = new Barbaro(nome, idade);
-                System.out.println("\nJogador criado");              
+                System.out.println("\nJogador criado");
+                jTextAreaErros.setText("Personagem criado");
             }
             else if(classeSelecionada.equals("Assassino")){
                 jogador = new Assassino(nome, idade);
-                System.out.println("\nJogador criado");               
+                System.out.println("\nJogador criado");
+                jTextAreaErros.setText("Personagem criado");
             }
             else if(classeSelecionada.equals("Cavaleiro")){
                 jogador = new Cavaleiro(nome, idade);
                 System.out.println("\nJogador criado");
+                jTextAreaErros.setText("Personagem criado");
             }
             else if(classeSelecionada.equals("Ladrao")){
                 jogador = new Ladrao(nome, idade);
                 System.out.println("\nJogador criado");
+                jTextAreaErros.setText("Personagem criado");
             }
             else if(classeSelecionada.equals("Paladino")){
                 jogador = new Paladino(nome, idade);
                 System.out.println("\nJogador criado");
-            }
-            else if(classeSelecionada.equals("Selecione uma classe")){
-                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
-                System.out.println("Erro ao cirar personagem");
-                System.out.println("Nenhuma classe foi selecionada");
-                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
+                jTextAreaErros.setText("Personagem criado");
             }
             else{
                 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
                 System.out.println("Erro ao cirar personagem");
                 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
+                jTextAreaErros.setText("Erro ao criar o personagem\nVerifique as opções de classe\nOu ja existe um personagem.");
             }
         }
         
@@ -321,6 +339,8 @@ public class JogadorGUI extends javax.swing.JFrame {
         // limpa os dados
         jTextFieldNome.setText("");
         jTextFieldIdade.setText("");
+        jTextAreaSelecClasse.setText("");
+        jComboBoxClasses.setSelectedIndex(0); //volta pra opcao principal
     }//GEN-LAST:event_jButtonLimparDadosActionPerformed
 
     private void jButtonDeletarJogadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeletarJogadorActionPerformed
@@ -329,21 +349,25 @@ public class JogadorGUI extends javax.swing.JFrame {
         jTextFieldIdade.setText("");
         jogador = null; //deleta o jogador e volta jogador para nulo
         System.out.println("Jogador deletado");
+        jTextAreaErros.setText("Jogador deletado!");
     }//GEN-LAST:event_jButtonDeletarJogadorActionPerformed
 
     private void jToggleButtonExibirPersonagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonExibirPersonagemActionPerformed
         // TODO add your handling code here:
         if(jToggleButtonExibirPersonagem.isSelected()){
+            jTextAreaErros.setText("botao exibir personagem LIGADO");
             System.out.println("botao exibir personagem LIGADO");
             
             if(jogador != null){
             String infoPersonagem = "Nome: " + jogador.getNome()
+                + "\n" + "Vida: " + jogador.getVida()
                 + "\n" + "Idade: " + jogador.getIdade() 
                 + "\n" + "Forca: " + jogador.getForca()
                 + "\n" + "Armadura: " + jogador.getArmadura()
                 + "\n" + "Defesa: " + jogador.getDefesa();
             jTextAreaInfoPersonagem.setText(infoPersonagem);
-            System.out.println("Exibindo personagem");            
+            System.out.println("Exibindo personagem");
+            jTextAreaErros.setText("Exibindo personagem");            
             }
             else{
                 jTextAreaInfoPersonagem.setText("nenhum personagem criado!");
@@ -351,6 +375,7 @@ public class JogadorGUI extends javax.swing.JFrame {
             }
         }else{
             System.out.println("botao exibir personagem DESLIGADO");
+            jTextAreaErros.setText("botao exibir personagem DESLIGADO");
             jTextAreaInfoPersonagem.setText("");
         }
     }//GEN-LAST:event_jToggleButtonExibirPersonagemActionPerformed
@@ -403,6 +428,8 @@ public class JogadorGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextArea jTextAreaErros;
     private javax.swing.JTextArea jTextAreaInfoPersonagem;
     private javax.swing.JTextArea jTextAreaSelecClasse;
     private javax.swing.JTextField jTextFieldIdade;
